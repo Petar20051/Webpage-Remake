@@ -98,6 +98,7 @@ padding: 12px 20px;
 
 .restart {
   padding: 20px 24px;
+  padding-bottom: 0px;
   border-top: 1px solid #eee;
 }
 
@@ -255,15 +256,14 @@ img {
 
 
 #hero {
-  height: 200px;
+  height: 9.6%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
   background: url("images/hero-background.jpeg") center/cover no-repeat;
-  padding: 0 40px;
-  margin-left: 0;
-  margin-right: 0;
+  padding: 20px 70px;
+
 }
 
 main > #hero {
@@ -277,9 +277,11 @@ main > #hero {
 }
 
 #hero p {
-  font-size: 16px;
-  max-width: 60%;
-  font-weight: 300;
+  font-size: 14px;
+  max-width: 75%;
+  font-weight: lighter;
+  letter-spacing: 2.5px;
+  line-height: 1.7;
 }
  .section-title {
   color: #666;
@@ -296,7 +298,7 @@ main > #hero {
 }
 
 #yaraplus-solutions {
-  padding-top: 10px;
+  padding-top: 40px;
 }
 
 .solutions-grid {
@@ -326,11 +328,12 @@ main > #hero {
 }
 
 .solution-content {
-  padding: 14px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 7px;
   flex-grow: 1;
+  padding-bottom: 0px;
 }
 
 .solution-header {
@@ -349,8 +352,7 @@ main > #hero {
   border-radius: 4px;
 }
 
-.solution-card h3 {
-  font-size: 15px;
+.solution-card h4 {
   font-weight: bold;
   margin: 0;
 }
@@ -397,16 +399,18 @@ main > #hero {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  height: 200px;
+  height: auto;
   position: relative;
 }
 
 .featured-card.wide {
-  flex: 7;
+  flex: 6.5;
+  padding: 0px;
 }
 
 .featured-card.small {
-  flex: 3;
+  flex: 3.5;
+  padding: 0px;
 }
 
 .featured-content {
@@ -415,17 +419,53 @@ main > #hero {
   gap: 20px;
   align-items: center;
   height: 100%;
+  padding: 20px;
 }
 
 .featured-content.reverse {
   flex-direction: row-reverse;
+  padding: 10px;
+  align-items:center ;
 }
 
 .featured-content img {
-  width: 130px;
+  width: 190px;
   height: 130px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+
+
+.info {
+  font-size: 13px;
+  color: #666;
+  width: 85%;
+  padding-top: 20px;
+  padding-left: 5px;
+  
+}
+
+
+
+.featured-content.reverse img {
+  width: 130px;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  border-radius: 50%;
+}
+
+.tags li {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 5px 10px;
+  color: gray;
+  border-radius: 20px;
+  border: 1px solid var(--light-gray);
 }
 
 .featured-text {
@@ -433,7 +473,7 @@ main > #hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .featured-header {
@@ -441,6 +481,8 @@ main > #hero {
   align-items: center;
   gap: 8px;
 }
+
+
 
 .label-icon {
   font-size: 11px;
@@ -462,9 +504,15 @@ main > #hero {
 }
 
 .featured-footer {
-  position: absolute;
-  right: 20px;
-  bottom: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.featured-text-smaller
+{
+  margin: 0 auto;
+  padding-top: -10px;
 }
 
 #eventsandpodcasts {
@@ -510,6 +558,7 @@ main > #hero {
   box-shadow: var(--shadow);
   flex: 1 1 0;
   display: flex;
+  width: 40%;
   flex-direction: column;
   overflow: hidden;
 }
@@ -521,51 +570,54 @@ main > #hero {
 }
 
 .event-content-wrapper {
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
+  gap: 8px;
 }
 
 .event-item h3 {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 5px;
+  
 }
 
 .event-item p {
   font-size: 13px;
-  color: #666;
-  margin-bottom: 20px;
+  color: #666;  
+  
 }
 
-.event-item a {
-  align-self: flex-end;
-  font-size: 13px;
-  font-weight: bold;
-  color: var(--link-color);
-}
 
+.podcasts-list
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+ 
 .podcast-item {
   background: white;
   border-radius: 10px;
-  padding: 15px 15px 30px;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  flex: 1 1 0;
+  flex: 1 1 
 }
 
 .podcastcontent {
   display: flex;
   gap: 15px;
+  padding: 10px;
+  letter-spacing: 1px;
+  
 }
 
 .podcastcontent img {
   width: 80px;
-  height: 80px;
+  height: 90px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -589,8 +641,12 @@ main > #hero {
   margin-bottom: 3px;
 }
 
+
+
+
 .podcast-item a {
   align-self: flex-end;
+  padding: 20px;
   font-size: 13px;
   font-weight: bold;
   color: var(--link-color);
@@ -598,6 +654,7 @@ main > #hero {
 
 #news {
   padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .news-title {
@@ -623,17 +680,17 @@ main > #hero {
 
 .news-list {
   display: flex;
-  gap: 20px;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
+  gap: 2.5%;
 }
 
 .news-item {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: var(--shadow);
-  width: 220px;
+  width: 22.5%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -650,28 +707,23 @@ main > #hero {
   font-size: 11px;
   font-weight: bold;
   color: #555;
-  padding: 15px 15px 5px;
+  padding: 15px 15px 0px;
 }
 
 .news-item h3 {
   font-size: 15px;
   font-weight: bold;
   padding: 0 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  width: 85%;
 }
 
-.news-item p:nth-of-type(2) {
-  font-size: 13px;
-  color: #666;
-  padding: 0 15px;
-  margin-bottom: 5px;
-}
-
-.news-item p:last-of-type {
+.news-item p {
   font-size: 12px;
   color: #333;
   padding: 0 15px;
   margin-bottom: 10px;
+  width: 85%;
 }
 
 .news-item a {
@@ -683,6 +735,36 @@ main > #hero {
 }
 
 
+.line-break {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.date{
+  letter-spacing: normal;
+  font-size: 13px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+#news .date{
+  padding: 0px 20px;
+}
+
+.event-item a, .podcast-item a{
+  align-self: flex-end;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--link-color);
+  padding: 20px;
+}
+
+.podcast-item a
+{
+  padding: 15px;
+}
 
 
 
