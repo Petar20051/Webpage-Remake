@@ -64,6 +64,7 @@ body {
   transition: background 0.2s ease;
 }
 
+
 .links li i {
   margin-right: 10px;
   font-size: 16px;
@@ -84,14 +85,25 @@ body {
 }
 
 .links li.active {
+  position: relative;
   background-color: #e6efff;
-  border-left: none;
   font-weight: bold;
   border-radius: 12px;
   margin: 4px 12px;
   color: #0060c9;
-padding: 12px 20px;
+  padding: 12px 20px;
+}
 
+.links li.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 50%;
+  background-color: #0060c9;
+  border-radius: 2px;
 }
 
 .links li.active a {
@@ -219,12 +231,6 @@ padding: 12px 20px;
 .fa-solid:before,.fa:before {
   color: var(--light-gray);
 }
-
-.links li.active i {
-  color: #1a4fb2 
-}
-
-
 
 main {
   flex: 1;
@@ -798,9 +804,6 @@ main > #hero {
  }
 
 @media (max-width: 1380px) {
-  body {
-    margin: 0px 0px;
-  }
 
   .solutions-grid,
   .featured-solutions-list,
@@ -827,9 +830,14 @@ main > #hero {
     justify-content: center;
   }
 
+  .featured-content.reverse
+  {
+    flex-direction: row-reverse;
+  }
   .featured-content.reverse img
  {
     height: 40%;
+    width: 200px;
 }
 
 .info{
@@ -841,7 +849,13 @@ main > #hero {
 }
  
 
+  .featured-text-smaller{
+    padding-right: 0px;
+  }
 
+  .featured-content{
+    justify-content: center;
+  }
 
 
 }
