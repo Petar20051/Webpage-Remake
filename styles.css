@@ -10,11 +10,13 @@
 }
 
 html {
-  background-color: #eaeff5;
+ background-color: #ffffff;
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 body {
-  margin: 40px auto;
+  margin: 0 auto;
   margin-top: 0px;
   background-color: #ffffff;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
@@ -22,7 +24,7 @@ body {
   font-family: var(--font-main);
   display: flex;
   justify-content: center;
-  min-height: 100%;
+  height: auto;
 }
 
 .layout {
@@ -181,7 +183,7 @@ padding: 12px 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
   background-color: rgb(1, 1, 87);
   border-radius: 4px;
   padding: 4px 8px;
@@ -229,6 +231,7 @@ main {
   overflow-y: auto;
   background: #f3f6fa;
   padding: 40px 60px;
+  padding-bottom: 80px;
   padding-top: 0px;
   width: 100%;
 }
@@ -263,12 +266,6 @@ img {
   gap: 3px;
 }
 
-
-.section-heading {
-  font-size: 24px;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
 
 
 
@@ -310,7 +307,7 @@ main > #hero {
 
 .section-heading {
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-weight: bold;
 }
 
@@ -461,7 +458,7 @@ main > #hero {
   color: #666;
   width: 85%;
   height: 20px;
-  
+  padding-top: 10px;
 }
 
 .desc {
@@ -469,8 +466,7 @@ main > #hero {
   font-weight: 500;
   color: #333;
   width: 85%;
-  height:30px
-  padding-bottom: 5px;
+  height: 30px;
 }
 
 
@@ -499,14 +495,24 @@ main > #hero {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 3px;
+  justify-content: flex-start;
+  gap: 6px;
 }
 
 .featured-header {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+#featuredsolutions .info
+{
+  padding-top: 0px;
+}
+
+#featuredsolutions .desc
+{
+  height: 15px;
 }
 
 
@@ -536,11 +542,6 @@ main > #hero {
   justify-content: flex-end;
 }
 
-.featured-text-smaller
-{
-  margin: 0 auto;
-  padding-top: -10px;
-}
 
 #eventsandpodcasts {
   display: flex;
@@ -556,7 +557,7 @@ main > #hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .eventandpodcaststitle h3 {
@@ -570,7 +571,7 @@ main > #hero {
   color: var(--link-color);
   border: 1px solid var(--link-color);
   border-radius: 5px;
-  padding: 6px 12px;
+  padding: 15px 12px;
 }
 
 .events-list {
@@ -592,12 +593,12 @@ main > #hero {
 
 .event-item img {
   width: 100%;
-  height: 160px;
+  height: 170px;
   object-fit: cover;
 }
 
 .event-content-wrapper {
-  padding: 15px;
+  padding: 17px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -606,12 +607,14 @@ main > #hero {
 .event-item h3 {
   font-size: 16px;
   font-weight: bold;
+  width: 85%;
   
 }
 
 .event-item p {
   font-size: 13px;
   color: #666;  
+  width: 90%;
   
 }
 
@@ -668,9 +671,6 @@ main > #hero {
   margin-bottom: 3px;
 }
 
-
-
-
 .podcast-item a {
   align-self: flex-end;
   padding: 20px;
@@ -688,7 +688,7 @@ main > #hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .news-title h2 {
@@ -702,7 +702,7 @@ main > #hero {
   color: var(--link-color);
   border: 1px solid var(--link-color);
   border-radius: 5px;
-  padding: 6px 12px;
+  padding: 15px 12px;
 }
 
 .news-list {
@@ -758,7 +758,7 @@ main > #hero {
   font-size: 13px;
   font-weight: bold;
   color: var(--link-color);
-  padding: 0 15px 15px;
+  padding: 20px;
 }
 
 
@@ -790,8 +790,12 @@ main > #hero {
 
 .podcast-item a
 {
-  padding: 15px;
+  padding: 20px;
 }
+
+.desc{
+  height: 46px;
+ }
 
 @media (max-width: 1380px) {
   body {
@@ -822,6 +826,22 @@ main > #hero {
   .news-list {
     justify-content: center;
   }
+
+  .featured-content.reverse img
+ {
+    height: 40%;
+}
+
+.info{
+  height: 30px;
+}
+
+.podcastcontent p{
+  height: 40px;
+}
+ 
+
+
 
 
 }
@@ -905,6 +925,16 @@ main > #hero {
     padding: 10px;
   }
   
+.links
+{
+  padding: 12px;
+  margin:4px
+}
+
+  .info{
+    height: 48px;
+  }
+
   .right-section {
     flex-direction: row;
     gap: 10px;
@@ -970,6 +1000,16 @@ main > #hero {
 
    .tags{
     padding-top: 16px;
+   }
+
+   .event-content-wrapper h3
+   {
+    height: 50px;
+   }
+
+   .event-content-wrapper p
+   {
+    height: 70px;
    }
 
 
